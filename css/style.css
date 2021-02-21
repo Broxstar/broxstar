@@ -3,22 +3,85 @@
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Noto Sans', sans-serif;
 }
 body
 {
     color: rgb(34, 34, 34);
     min-height: 100vh;
     background: #ffffff;
-    font-family: Noto Sans, Helvetica, Arial, sans-serif;
 }
-section
+::-moz-selection
+{
+    background: rgb(252, 160, 255);
+}
+::selection
+{
+    background: rgb(252, 160, 255);
+}
+
+/*navigation bar*/
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+header.sticky
+{
+    padding: 5px 100px;
+    background: #fff;
+}
+header .logo img
+{
+    width: 70px;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.6s;
+}
+header.sticky .logo,
+header.sticky ul li a
+{
+    color: #000;
+}
+
+/*navigarionbar ende*/
+
+/* wave */
+
+.wave1
 {
     z-index: -5;
-    margin: 0 auto;
     display: flex;
-    width: 100%;
     position: relative;
-    width: 100%;
     height: 100vh;
     background: url(/images/firstbackground3.png);
     background-size: cover;
@@ -81,27 +144,11 @@ section .wave:after
     animation-delay: -5s;
     animation: wave 20s linear infinite;
 }
-a
-{
-    text-align: center;
-    font-size: 30px;
-    padding: 2%;
-    text-decoration: none;
-    color: white;
-}
-.navigation
-{
-    text-align: center;
-    color: white;
-    margin-top: -49%;}
-h2
-{
-    text-align: center;
-}
-p
-{
-    text-align: center;
-}
+
+/*wave ende*/
+
+/*rgb kreis*/
+
 @keyframes animate
 {
     0%
@@ -116,10 +163,11 @@ p
 .loader
 {
     margin: 0 auto;
-    margin-top: 60%;
+    margin-top: 50%;
+    bottom: -85px;
     position: relative;
-    width:300px;
-    height: 300px;
+    width:200px;
+    height: 200px;
     border-radius: 50%;
     background: linear-gradient(#9156ff, #b700ff, #ff00e0,);
     animation: animate 1s linear infinite;
@@ -158,4 +206,83 @@ p
     bottom: 25px;
     background: #ffffff;
     border-radius: 50%;
+}
+
+/*rgb kreis ende*/
+
+.übermich
+{
+    margin-top: 5%;
+    text-align: center;
+}
+.textaboutme
+{
+    text-align: center;
+}
+footer 
+{
+    position: relative;
+    left: 0;
+    background-color: rgb(237, 225, 255);
+}
+.footer
+{
+    position: absolute;
+    top: 14vh;
+    right: 113vh;
+}
+.footer1
+{
+    position: absolute;
+    top: 17vh;
+    right: 125vh;
+}
+.socialmedia
+{
+    position: relative;
+    top: -7vh;
+    right: -115vh;
+    width: 60px;
+}
+a
+{
+    text-decoration: none;
+}
+a:link
+{
+    color: rgb(252, 157, 255);
+}
+a:visited
+{
+    color: rgb(201, 160, 255);
+}
+ a:hover
+{
+    color:rgb(227, 116, 255);
+}
+.cloud
+{
+    position: absolute;
+    right: 0vh;
+    height: 80vh;
+}
+.cloud2
+{
+    position: absolute;
+    left 0vh;
+    height: 85vh;
+}
+.pictureaboutme
+{
+    position: absolute;
+    right: 100vh;
+    width: 250px;
+}
+.aboutmesocial
+{
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    right: 79vh;
+    bottom: -40vh;
 }
