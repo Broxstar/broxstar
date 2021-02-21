@@ -1,0 +1,288 @@
+*
+{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Noto Sans', sans-serif;
+}
+body
+{
+    color: rgb(34, 34, 34);
+    min-height: 100vh;
+    background: #ffffff;
+}
+::-moz-selection
+{
+    background: rgb(252, 160, 255);
+}
+::selection
+{
+    background: rgb(252, 160, 255);
+}
+
+/*navigation bar*/
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+header.sticky
+{
+    padding: 5px 100px;
+    background: #fff;
+}
+header .logo img
+{
+    width: 70px;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.6s;
+}
+header.sticky .logo,
+header.sticky ul li a
+{
+    color: #000;
+}
+
+/*navigarionbar ende*/
+
+/* wave */
+
+.wave1
+{
+    z-index: -5;
+    display: flex;
+    position: relative;
+    height: 100vh;
+    background: url(/images/firstbackground3.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+section .wave
+{
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    bottom: 0;
+    left: 0;
+    background: url(/images/wave.png);
+    animation: wave 10s linear infinite;
+}
+section .wave:before
+{
+    content: '';
+    width: 100%;
+    height: 143px;
+    background: url(/images/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    animation: wave-reverse 10s linear infinite;
+}
+@keyframes wave
+{
+    0%
+    {
+        background-position: 0;
+    }
+    100%
+    {
+        background-position: 1360px;
+    }
+}
+@keyframes wave-reverse
+{
+    0%
+    {
+        background-position: 1360px;
+    }
+    100%
+    {
+        background-position: 0;
+    }
+}
+section .wave:after
+{
+    content: '';
+    width: 100%;
+    height: 143px;
+    background: url(/images/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    animation-delay: -5s;
+    animation: wave 20s linear infinite;
+}
+
+/*wave ende*/
+
+/*rgb kreis*/
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.loader
+{
+    margin: 0 auto;
+    margin-top: 50%;
+    bottom: -85px;
+    position: relative;
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#9156ff, #b700ff, #ff00e0,);
+    animation: animate 1s linear infinite;
+}
+.loader span
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#6156ff, #9900ff, #ff00e0);
+}
+.loader span:nth-child(1)
+{
+    filter: blur(5px);
+}
+.loader span:nth-child(2)
+{
+    filter: blur(10px);
+}
+.loader span:nth-child(3)
+{
+    filter: blur(25px);
+}
+.loader span:nth-child(4)
+{
+    filter: blur(50px);
+}
+.loader:after
+{
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+/*rgb kreis ende*/
+
+.übermich
+{
+    margin-top: 5%;
+    text-align: center;
+}
+.textaboutme
+{
+    text-align: center;
+}
+footer 
+{
+    position: relative;
+    left: 0;
+    background-color: rgb(237, 225, 255);
+}
+.footer
+{
+    position: absolute;
+    top: 14vh;
+    right: 113vh;
+}
+.footer1
+{
+    position: absolute;
+    top: 17vh;
+    right: 125vh;
+}
+.socialmedia
+{
+    position: relative;
+    top: -7vh;
+    right: -115vh;
+    width: 60px;
+}
+a
+{
+    text-decoration: none;
+}
+a:link
+{
+    color: rgb(252, 157, 255);
+}
+a:visited
+{
+    color: rgb(201, 160, 255);
+}
+ a:hover
+{
+    color:rgb(227, 116, 255);
+}
+.cloud
+{
+    position: absolute;
+    right: 0vh;
+    height: 80vh;
+}
+.cloud2
+{
+    position: absolute;
+    left 0vh;
+    height: 85vh;
+}
+.pictureaboutme
+{
+    position: absolute;
+    right: 100vh;
+    width: 250px;
+}
+.aboutmesocial
+{
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    right: 79vh;
+    bottom: -40vh;
+}
