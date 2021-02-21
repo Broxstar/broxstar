@@ -8,19 +8,53 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-    <section>
+    <section class="wave1">
         <div class="wave"></div>
     </section>
-    <div class="navigation">
-        <a href="#">Galerie</a>
-        <a href="#">über mich</a>
-        <a href="#">Gib mir dein Geld</a>
-    </div>
-    <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <header>
+        <a href="#" class="logo"><img src="images/favicon.png"></a>
+        <ul>
+            <li><a href="#">Galerie</a></li>
+            <li><a href="#aboutme">über mich</a></li>
+            <li><a href="#">Gib mir dein Geld</a></li>
+        </ul>
+    </header>
+    <section class="banner"></section>
+    <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    </script>
+    <br id="aboutme">
+    <h1 class="übermich">über mich</h1>
+    <p class="textaboutme">ich bin Niklas, 16 Jahre alt und komme aus Österreich </p>
+    <p class="textaboutme">in meiner Freizeit gehe ich gerne Fotografieren (Bilder findest du in <a class="link1" href="#">Galerie</a>)</p>
+    <p class="textaboutme">außerdem betreibe ich eine <a class="link1" href="https://youtube.com/c/broxstar" target="_blank">YouTube Kanal</a> auf dem ich hauptsächlich Videos zum Spiel "Minecraft" produziere</p>
+    <p class="textaboutme">Wer außer Rona diesen Text süß findet wird einen qualvollen Tod erleiden</p> 
+    <img class="pictureaboutme" src="/images/favicon.png">
+    <br>
+    <br>
+    <section class="aboutmesocial">
+    <p>Discord: Broxstar#3211</p>
+    <p>Instagram: broxstaryt</p>
+    <p>YouTube: Broxstar</p>
+    </section>
+    <img class="cloud" src="/images/kisspng-purple-sky-pattern-floating-clouds-5aa4f5fc9ec546.1023503715207603166503.png">
+    <img class="cloud2" src="/images/clouds2.png">
+    <footer>
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <br>
+        <p class="footer">© Copyright Broxstar. All Rights Reserved Designed by Broxstar</p>
+        <p class="footer1">Designed by Broxstar</p>
+        <a href="https://instagram.com/broxstaryt" target="_blank"><img src="/images/instagram.png" class="socialmedia"></a>
+        <a href="https://youtube.com/c/broxstar" target="_blank"><img src="/images/youtube.png" class="socialmedia"></a>
+        <a href="https://twitter.com/BroxstarLP" target="_blank"><img src="/images/twitter.png" class="socialmedia"></a>
+    </footer>
 </body>
 </html>
